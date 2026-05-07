@@ -80,8 +80,6 @@ class Student extends Person {
     }
 };
 
-getDetails();
-
 
 // Problem - 7
 const getIntersection = (a : number[], b : number[]) : number[] => {
