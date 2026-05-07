@@ -1,5 +1,5 @@
 ## Title : 
- `any` is a “Type Safety Hole” and `unknown` is Safer
+ `any` is a “Type Safety Hole” and `unknown` is "Safer"
 
 ## Introduction :
  TypeScript’s biggest advantage is type safety. However, the `any` type completely disables that protection. That’s why developers often call it a “type safety hole.” On the other hand, `unknown` allows flexibility while still forcing developers to validate data before using it.
@@ -7,16 +7,12 @@
 
 ## Why `any` is a Type Safety Hole ? :
 
-The `any` type essentially turns off the type checker for a specific variable.
-
-- The Danger: We can assign any value to `any`, and we can assign `any` to any type.
-
-- No Errors, Just Crashes: TypeScript will not complain if we call methods that do not exist, causing the application to crash at runtime.
+The `any` type essentially turns off the type checker for a specific variable. Therefore, we can assign any value to `any`, and we can assign `any` to any type. Moreover, typescript will not complain if we call methods that do not exist, causing the application to crash at runtime.
 
 ### Code Example of `any` Failure:
 
 ```
-typescript
+// typescript
 
 let userInput: any = "Hello";
 // No error from TypeScript, but this will crash at runtime!
@@ -25,16 +21,12 @@ console.log(userInput.doesNotExist()); // No error!
 ```
 
 ## Why `unknown` is the Safer Choice ? :
-`unknown` is like `any`'s responsible older sibling. It allows to store any value, but it prevents from using that value until checked what it is.
-
-- The Benefit: It ensures type safety by forcing runtime validation (type checks) before allowing operations.
-
-- Preventing Errors: We cannot access properties, call methods, or construct values of an `unknown` type without first narrowing it.
+`unknown` is like `any`'s responsible older sibling. It allows to store any value, but it prevents from using that value until checked what it is. It ensures type safety by forcing runtime validation (type checks) before allowing operations. And we cannot access properties, call methods, or construct values of an `unknown` type without first narrowing it.
 
 ### Code Example of `unknown` Safety:
 
 ```
-typescript
+// typescript
 
 let userRawData: unknown = { name: "Alice", age: 30 };
 
@@ -48,9 +40,7 @@ if (typeof userRawData === "object" && userRawData !== null && "name" in userRaw
 ```
 
 ## Understanding Type Narrowing :
-Type narrowing is the process of taking a wide, uncertain type (like `unknown` or a union type like `string | number`) and refining it to a more specific, predictable type.
-
-- How it Works: We use JS control flow statements—like `if`, `switch`, or `typeof`—to tell TypeScript that a variable must be a specific type within a certain block of code.
+Type narrowing is the process of taking a wide, uncertain type (like `unknown` or a union type like `string | number`) and refining it to a more specific, predictable type. We use JavaScript control flow statements—like `if`, `switch`, or `typeof`—to tell TypeScript that a variable must be a specific type within a certain block of code.
 
 ### Common Narrowing Techniques:
 

@@ -9,7 +9,7 @@
  We can define a generic function using a type parameter, a placeholder inside angle brackets (`<T>`).
  
 ```
-typescript
+// typescript
 
 // 'T' is a placeholder for any type
 function getIdentity<T>(arg: T): T {
@@ -30,7 +30,7 @@ let output2 = getIdentity<number>(100);
 `Generics` can be applied to classes to create containers that hold specific yet flexible data types.
 
 ```
-typescript
+// typescript
 
 // A container that can hold anything, but only ONE type at a time
 class Container<T> {
@@ -57,7 +57,7 @@ let numberContainer = new Container<number>(100);
 
 ## Advantages :
  
-- Compile-time Type Safety: The compiler catches errors (trying to add a string to an Array<num>) before the code runs.
+- Compile-time Type Safety: The compiler catches errors (trying to add a string to an Array of numbers) before the code runs.
  
 - Code Reusability: One class or function serves multiple types.
  
