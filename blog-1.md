@@ -5,7 +5,7 @@
  TypeScript’s biggest advantage is type safety. However, the `any` type completely disables that protection. That’s why developers often call it a “type safety hole.” On the other hand, `unknown` allows flexibility while still forcing developers to validate data before using it.
 
 
-## Why any is a Type Safety Hole ? :
+## Why `any` is a Type Safety Hole ? :
 
 The `any` type essentially turns off the type checker for a specific variable.
 
@@ -13,7 +13,7 @@ The `any` type essentially turns off the type checker for a specific variable.
 
 - No Errors, Just Crashes: TypeScript will not complain if we call methods that do not exist, causing the application to crash at runtime.
 
-### Code Example of any Failure:
+### Code Example of `any` Failure:
 
 ```
 typescript
@@ -24,14 +24,14 @@ console.log(userInput.toUpperCase());
 console.log(userInput.doesNotExist()); // No error!
 ```
 
-## Why unknown is the Safer Choice ? :
+## Why `unknown` is the Safer Choice ? :
 `unknown` is like `any`'s responsible older sibling. It allows to store any value, but it prevents from using that value until checked what it is.
 
 - The Benefit: It ensures type safety by forcing runtime validation (type checks) before allowing operations.
 
 - Preventing Errors: We cannot access properties, call methods, or construct values of an `unknown` type without first narrowing it.
 
-### Code Example of unknown Safety:
+### Code Example of `unknown` Safety:
 
 ```
 typescript
@@ -76,4 +76,5 @@ function process(input: string | number) {
 }
 ```
 
-Conclusion : `any` removes TypeScript’s protection and can introduce hidden bugs into the application. On the contrary, `unknown` provides flexibility while forcing safe validation through type narrowing. Whenever we work with APIs, user input, or unpredictable data, we should prefer `unknown` over `any`.
+## Conclusion :
+ `any` removes TypeScript’s protection and can introduce hidden bugs into the application. On the contrary, `unknown` provides flexibility while forcing safe validation through type narrowing. Whenever we work with APIs, user input, or unpredictable data, we should prefer `unknown` over `any`.

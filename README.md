@@ -1,8 +1,10 @@
-# B7A1 — Advanced Problem Solving with TS & OOP
+# B7A1 
+
+## Advanced Problem Solving with TypeScript & OOP
 
 ## Overview
 
-The goal of this assignment was to solve some of the core concepts of TypeScript such as:
+The inspiration of this assignment was to solve some of the core concepts of TypeScript such as :
 
 - Type safety
 - Generics
@@ -12,12 +14,12 @@ The goal of this assignment was to solve some of the core concepts of TypeScript
 
 ---
 
-## Project Feature
+## Project Features
 
-- `solutions.ts` → Contains solutions of 7 problems
-- `blog-1.md` → Blog on Concept of type narrowing
-- `blog-2.md` → Blog on Generics
-- `README.md` → Project documentation
+- `solutions.ts` - Contains solutions of 7 problems
+- `blog-1.md` - Blog on Concept of type narrowing
+- `blog-2.md` - Blog on Generics
+- `README.md` - Project documentation
 
 ---
 
@@ -27,6 +29,8 @@ Two blog posts are included:
 
 1. Explaining the concept of type narrowing
 2. Generics in TypeScript
+
+---
 
 ## Epilogue
 

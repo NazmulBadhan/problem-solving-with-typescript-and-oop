@@ -1,12 +1,12 @@
 ## Title : 
-Generics - Building Reusable Yet Strictly Typed Code
+`Generics` - Building Reusable Yet Strictly Typed Code
 
 ## Introduction : 
-Generics are one of TypeScript’s most powerful features. They allow us to create reusable functions, classes, and components that adapt to different data types while preserving strict type safety. Without generics, developers often sacrifice either flexibility or safety.
+`Generics` are one of TypeScript’s most powerful features. They allow us to create reusable functions, classes, and components that adapt to different data types while preserving strict type safety. Without generics, developers often sacrifice either flexibility or safety.
 
-## Creating Reusable Functions (Methods)
+## Creating Reusable Functions (Methods) :
 
- We can define a generic function using a type parameter, a placeholder inside angle brackets (<T>).
+ We can define a generic function using a type parameter, a placeholder inside angle brackets (`<T>`).
  
 ```
 typescript
@@ -25,9 +25,9 @@ let output2 = getIdentity<number>(100);
 
 - The function is written once, but used for strings and numbers securely.
 
-## Building Reusable Data Structures (Classes)
+## Building Reusable Data Structures (Classes) :
 
-Generics can be applied to classes to create containers that hold specific yet flexible data types.
+`Generics` can be applied to classes to create containers that hold specific yet flexible data types.
 
 ```
 typescript
@@ -64,4 +64,4 @@ let numberContainer = new Container<number>(100);
 - No Manual Casting: We don't need to manually tell the code that an object is a string after retrieving it.
 
 ## Conclusion : 
-Generics are powerful tools that provide "type-safe flexibility." By replacing specific types with type parameters, we build reusable components that stay strictly typed, reducing bugs and improving code clarity. It is the foundation of modern, safe programming languages and collections frameworks.
+`Generics` are powerful tools that provide "type-safe flexibility." By replacing specific types with type parameters, we build reusable components that stay strictly typed, reducing bugs and improving code clarity. It is the foundation of modern, safe programming languages and collections frameworks.
